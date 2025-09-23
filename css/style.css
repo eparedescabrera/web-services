@@ -240,12 +240,13 @@ body {
     display: inline-block;
     margin-top: 10px;
     padding: 8px 15px;
-    background: #0078d7; /* azul estilo Windows */
+    background: #e90a15; /* azul estilo Windows */
     color: #fff;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
     transition: background 0.3s;
+    size: 20px;
 }
 
 .btn-pdf:hover {
