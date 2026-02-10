@@ -1,3 +1,9 @@
+
+const currentYear = document.getElementById('current-year');
+if (currentYear) {
+  currentYear.textContent = new Date().getFullYear();
+}
+
 document.querySelectorAll('.card').forEach((card, index) => {
   card.addEventListener('click', () => {
     card.classList.toggle('flipped');
