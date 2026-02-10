@@ -18,6 +18,19 @@
 
 <body>
     <div class="container">
+        <header class="site-header">
+            <nav class="main-menu" aria-label="Menú principal">
+                <button class="menu-toggle" aria-label="Abrir menú" aria-expanded="false" aria-controls="menuList">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <ul id="menuList" class="menu-list">
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#redes">Redes</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <div class="blob"></div>
         <div class="cube-container">
   <div class="cube">
@@ -31,7 +44,7 @@
 </div>
 
 
-        <div class="services">
+        <div id="servicios" class="services">
             <div class="card fade-in">
                 <div class="card-inner card-front">
                     <img src="img/office.jpeg" alt="Paquetes Office">
@@ -110,7 +123,7 @@
             <div class="footer-container">
                 <p>&copy; 2025 Mis Servicios | Todos los derechos reservados</p>
 
-               <div class="footer-links">
+               <div id="redes" class="footer-links">
   <a href="https://www.facebook.com/media/set?vanity=lyliam.paredesgonzales&set=a.2206443972756224" 
      target="_blank">
     <i class="fab fa-facebook fa-2x" style="color:#3b5998;"></i>
@@ -122,7 +135,7 @@
 </div>
 
 
-                <div class="footer-contact">
+                <div id="contacto" class="footer-contact">
                     <p>Contacto: <a href="">84750400/85548880</a></p>
                 </div>
             </div>
