@@ -1,24 +1,26 @@
 body {
-      margin: 0;
-      font-family: "Poppins", sans-serif;
-      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      overflow-x: hidden;
-      padding: 20px;
-    }
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  overflow-x: hidden;
+  padding: 20px;
+}
 
 .container {
-      text-align: center;
-      width: 100%;
-      max-width: 1000px;
-    }
+  text-align: center;
+  width: 100%;
+  max-width: 1000px;
+}
 
 .site-header {
   margin-bottom: 20px;
+  position: sticky;
+  top: 12px;
+  z-index: 100;
 }
 
 .main-menu {
@@ -26,6 +28,7 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 14px;
   padding: 10px 16px;
+  backdrop-filter: blur(8px);
 }
 
 .menu-list {
@@ -59,185 +62,234 @@ body {
   cursor: pointer;
 }
 
-    h1 {
-      font-size: 2rem;
-      margin-bottom: 1.5rem;
-    }
+.intro,
+.contact-section,
+.services-section {
+  background: rgba(0, 0, 0, 0.22);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 18px;
+  padding: 20px;
+  margin-bottom: 24px;
+}
 
-    .services {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      perspective: 1000px;
-    }
+.intro p {
+  margin: 0 auto;
+  max-width: 760px;
+  line-height: 1.7;
+}
 
-    .card {
-      position: relative;
-      height: auto;
-      min-height: 280px;
-      transform-style: preserve-3d;
-      transition: transform 0.8s;
-      cursor: pointer;
-      border-radius: 20px;
-      padding: 3px;
-      background: linear-gradient(135deg, #ff6ec4, #7873f5, #4ade80, #22d3ee);
-      background-size: 300% 300%;
-      animation: gradientBorder 6s ease infinite;
-    }
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+  perspective: 1000px;
+}
 
-    @keyframes gradientBorder {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
-    }
+.card {
+  position: relative;
+  height: auto;
+  min-height: 280px;
+  transform-style: preserve-3d;
+  transition: transform 0.8s;
+  cursor: pointer;
+  border-radius: 20px;
+  padding: 3px;
+  background: linear-gradient(135deg, #ff6ec4, #7873f5, #4ade80, #22d3ee);
+  background-size: 300% 300%;
+  animation: gradientBorder 6s ease infinite;
+}
 
-    .card-inner {
-      position: relative;
-      border-radius: 18px;
-      background: rgba(15, 32, 39, 0.95);
-      color: #fff;
-      text-align: center;
-      padding: 20px;
-      backface-visibility: hidden;
-      overflow: hidden;
-      height: 100%;
-    }
+@keyframes gradientBorder {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
 
-    /* 🔹 Imagen ajustada */
-    .card-front img {
-      width: 100%;
-      max-height: 140px;
-      object-fit: contain; /* mantiene proporción */
-      border-radius: 25px;
-      margin-bottom: 10px;
-    }
-    ------------------
-    .card-inner ul {
-    text-align: left;
-    margin: 10px 0;
-    padding-left: 20px;
+.card-inner {
+  position: relative;
+  border-radius: 18px;
+  background: rgba(15, 32, 39, 0.95);
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+  backface-visibility: hidden;
+  overflow: hidden;
+  height: 100%;
+}
+
+.card-front img {
+  width: 100%;
+  max-height: 140px;
+  object-fit: contain;
+  border-radius: 25px;
+  margin-bottom: 10px;
+}
+
+.card-inner ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin: 10px 0 0;
 }
 
 .card-inner li {
-    margin-bottom: 5px;
-    line-height: 1.4;
+  background: #3594de;
+  padding: 5px 10px;
+  border-radius: 8px;
 }
 
+.card-front h3 {
+  margin: 0;
+  font-size: 1.2rem;
+}
 
-    .card-front h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
+.card.flipped {
+  transform: rotateY(180deg);
+}
 
-    .card-back {
-      transform: rotateY(180deg);
-      font-size: 0.9rem;
-      padding: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
+.fade-in {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeIn 1s forwards;
+}
 
-    .card.flipped {
-      transform: rotateY(180deg);
-    }
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-    .fade-in {
-      opacity: 0;
-      transform: translateY(30px);
-      animation: fadeIn 1s forwards;
-    }
+.card:hover {
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+  transform: scale(1.03) rotateY(10deg);
+}
 
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
+.btn-pdf {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 8px 15px;
+  background: #e90a15;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+  transition: background 0.3s;
+}
 
-    .card:hover {
-      box-shadow: 0 0 20px rgba(255,255,255,0.3);
-      transform: scale(1.03) rotateY(10deg);
-    }
+.btn-pdf:hover {
+  background: #005a9e;
+}
 
-    /* 📱 RESPONSIVE */
-    @media (max-width: 768px) {
-      h1 {
-        font-size: 1.7rem;
-      }
-      .card {
-        min-height: 250px;
-      }
-      .card-front img {
-        max-height: 120px;
-      }
-    }
+.cube-container {
+  perspective: 1000px;
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+}
 
-    @media (max-width: 480px) {
-      .main-menu {
-        text-align: left;
-      }
+.cube {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  transform-style: preserve-3d;
+  animation: rotateCube 8s infinite linear;
+}
 
-      .menu-toggle {
-        display: block;
-        margin-left: auto;
-      }
+.face {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  background: linear-gradient(135deg, #0078d7, #e704ab);
+  border: 2px solid #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
 
-      .menu-list {
-        display: none;
-        flex-direction: column;
-        margin-top: 10px;
-      }
+.front { transform: rotateY(0deg) translateZ(75px); }
+.back { transform: rotateY(180deg) translateZ(75px); }
+.left { transform: rotateY(-90deg) translateZ(75px); }
+.right { transform: rotateY(90deg) translateZ(75px); }
+.top { transform: rotateX(90deg) translateZ(75px); }
+.bottom { transform: rotateX(-90deg) translateZ(75px); }
 
-      .menu-list.menu-open {
-        display: flex;
-      }
+@keyframes rotateCube {
+  from { transform: rotateX(0deg) rotateY(0deg); }
+  to { transform: rotateX(360deg) rotateY(360deg); }
+}
 
-      .services {
-        grid-template-columns: 1fr;
-      }
-      h1 {
-        font-size: 1.5rem;
-      }
-      .card {
-        min-height: 220px;
-      }
-      .card-front img {
-        max-height: 100px;
-      }
-    }
-    /* Footer */
+.contact-form {
+  display: grid;
+  gap: 10px;
+  text-align: left;
+  max-width: 560px;
+  margin: 0 auto;
+}
+
+.contact-form label {
+  font-weight: 700;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 8px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  color: #fff;
+  box-sizing: border-box;
+}
+
+.contact-form button {
+  border: none;
+  border-radius: 8px;
+  padding: 12px;
+  font-weight: 700;
+  color: #fff;
+  background: linear-gradient(135deg, #22d3ee, #0078d7);
+  cursor: pointer;
+}
+
 .footer {
-    background: #111;
-    color: #f1f1f1;
-    padding: 20px 0;
-    text-align: center;
-    margin-top: 50px;
+  background: #111;
+  color: #f1f1f1;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 50px;
+  border-radius: 14px;
 }
 
 .footer-container {
-    max-width: 1200px;
-    margin: 0 auto;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .footer-links {
-    margin: 10px 0;
+  margin: 10px 0;
 }
 
 .footer-links a {
-    color: #f1f1f1;
-    margin: 0 10px;
-    text-decoration: none;
-    transition: color 0.3s;
+  color: #f1f1f1;
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #ff9800;
+  color: #ff9800;
 }
 
 .footer-contact a {
-    color: #ff9800;
-    text-decoration: none;
+  color: #ff9800;
+  text-decoration: none;
 }
 
 .whatsapp-float {
@@ -254,7 +306,7 @@ body {
   align-items: center;
   text-decoration: none;
   font-size: 30px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
   z-index: 1000;
   transition: transform 0.3s;
 }
@@ -263,94 +315,6 @@ body {
   transform: scale(1.1);
 }
 
-
-@keyframes typing {
-  from { width: 0; }
-  to { width: 12ch; } /* número de caracteres a mostrar */
-}
-
-@keyframes blink {
-  50% { border-color: transparent; }
-}
-.card-inner ul {
-    display: flex;
-    flex-wrap: wrap;   /* Para que si no caben en la tarjeta, bajen ordenados */
-    gap: 10px;         /* Espacio entre materias */
-    list-style: none;  /* Quita las viñetas (•) */
-    padding: 0;
-    margin: 10px 0 0 0;
-}
-
-.card-inner li {
-    background: #3594de;  /* Opcional: fondito para que resalten */
-    padding: 5px 10px;
-    border-radius: 8px;
-}
-
-.btn-pdf {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 8px 15px;
-    background: #e90a15; /* azul estilo Windows */
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: background 0.3s;
-    size: 40px;
-}
-
-.btn-pdf:hover {
-    background: #005a9e;
-}
-/* Contenedor del cubo */
-.cube-container {
-  perspective: 1000px;
-  display: flex;
-  justify-content: center;
-  margin: 40px 0;
-}
-
-/* El cubo */
-.cube {
-  position: relative;
-  width: 150px;
-  height: 150px;
-  transform-style: preserve-3d;
-  animation: rotateCube 8s infinite linear;
-}
-
-/* Caras del cubo */
-.face {
-  position: absolute;
-  width: 150px;
-  height: 150px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: bold;
-  color: #fff;
-  background: linear-gradient(135deg, #0078d7, #e704ab);
-  border: 2px solid #fff;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-}
-
-/* Posición de cada cara */
-.front  { transform: rotateY(0deg) translateZ(75px); }
-.back   { transform: rotateY(180deg) translateZ(75px); }
-.left   { transform: rotateY(-90deg) translateZ(75px); }
-.right  { transform: rotateY(90deg) translateZ(75px); }
-.top    { transform: rotateX(90deg) translateZ(75px); }
-.bottom { transform: rotateX(-90deg) translateZ(75px); }
-
-/* Animación de giro */
-@keyframes rotateCube {
-  from { transform: rotateX(0deg) rotateY(0deg); }
-  to   { transform: rotateX(360deg) rotateY(360deg); }
-}
-
-/* Modal */
 .modal {
   display: none;
   position: fixed;
@@ -364,7 +328,6 @@ body {
   background: rgba(0, 0, 0, 0.9);
 }
 
-/* Imagen dentro del modal */
 .modal-content {
   margin: auto;
   display: block;
@@ -376,10 +339,9 @@ body {
 
 @keyframes zoom {
   from { transform: scale(0.3); opacity: 0; }
-  to   { transform: scale(1); opacity: 1; }
+  to { transform: scale(1); opacity: 1; }
 }
 
-/* Botón de cerrar */
 .close {
   position: absolute;
   top: 20px;
@@ -390,10 +352,35 @@ body {
   cursor: pointer;
 }
 
-/* Texto debajo de la imagen */
 #caption {
   margin: 20px auto;
   text-align: center;
   color: #ccc;
   font-size: 18px;
+}
+
+@media (max-width: 768px) {
+  .card { min-height: 250px; }
+  .card-front img { max-height: 120px; }
+}
+
+@media (max-width: 480px) {
+  .main-menu { text-align: left; }
+
+  .menu-toggle {
+    display: block;
+    margin-left: auto;
+  }
+
+  .menu-list {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  .menu-list.menu-open { display: flex; }
+
+  .services { grid-template-columns: 1fr; }
+  .card { min-height: 220px; }
+  .card-front img { max-height: 100px; }
 }

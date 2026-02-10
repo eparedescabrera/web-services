@@ -9,14 +9,15 @@
     <link rel="stylesheet" href="css/style.css">
     <script src="https://kit.fontawesome.com/739c16c71e.js" crossorigin="anonymous"></script>
 </head>
-<!-- Modal para ampliar imágenes -->
-<div id="imgModal" class="modal">
-  <span class="close">&times;</span>
-  <img class="modal-content" id="modalImg">
-  <div id="caption"></div>
-</div>
 
 <body>
+    <!-- Modal para ampliar imágenes -->
+    <div id="imgModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modalImg" alt="Imagen ampliada">
+        <div id="caption"></div>
+    </div>
+
     <div class="container">
         <header class="site-header">
             <nav class="main-menu" aria-label="Menú principal">
@@ -24,128 +25,145 @@
                     <i class="fa-solid fa-bars"></i>
                 </button>
                 <ul id="menuList" class="menu-list">
+                    <li><a href="#inicio">Inicio</a></li>
                     <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#redes">Redes</a></li>
                     <li><a href="#contacto">Contacto</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div class="blob"></div>
+        <section id="inicio" class="intro">
+            <h1>Bienvenidos a Mi Emprendimiento</h1>
+            <p>
+                Soy una emprendedora que ofrece soluciones prácticas para tu día a día: apoyo académico,
+                impresión, servicios de oficina, accesorios y más. Mi objetivo es brindarte atención cercana,
+                rápida y de confianza en cada servicio.
+            </p>
+        </section>
+
         <div class="cube-container">
-  <div class="cube">
-    <div class="face front">Mis Servicios</div>
-    <div class="face back">Mis Servicios</div>
-    <div class="face left">Mis Servicios</div>
-    <div class="face right">Mis Servicios</div>
-    <div class="face top">Mis Servicios</div>
-    <div class="face bottom">Mis Servicios</div>
-  </div>
-</div>
-
-
-        <div id="servicios" class="services">
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/office.jpeg" alt="Paquetes Office">
-                    <h3>Instalación de Office</h3>
-                     <ul>
-                        <li>Licencia Activada</li>
-                       
-                    </ul>
-                </div>
-
+            <div class="cube">
+                <div class="face front">Mis Servicios</div>
+                <div class="face back">Mis Servicios</div>
+                <div class="face left">Mis Servicios</div>
+                <div class="face right">Mis Servicios</div>
+                <div class="face top">Mis Servicios</div>
+                <div class="face bottom">Mis Servicios</div>
             </div>
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/images.jpeg" class="chapea" alt="Estamos para Servirte">
-                    <h3>Chapea</h3>
-                    <ul>
-                        <li>San Pablo</li>
-                        <li>Carmona </li>
-                        <li>Pavónes </li>
-                         <li>Santa Rita</li>
-                    </ul>
-                </div>
-
-            </div>
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/impres.jpg" alt="Impresiónes y Copias">
-                    <h3>Impresiónes y Copias</h3>
-                    <ul>
-                        <li>A Color</li>
-                        <li>Blanco y Negro </li>
-
-                    </ul>
-
-                </div>
-
-            </div>
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/anny.jpg" alt="Ventas de Pulseras y Aretes">
-                    <h3>Ventas de Pulseras y Aretes</h3>
-                    <a href="pdf/Pulseras y Aretes.pdf" target="_blank" class="btn-pdf"><i
-                            class="fa-regular fa-file-pdf"></i></a>
-
-                </div>
-
-            </div>
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/descarga.png" alt="Cuestionario Escolar">
-                    <h3>Cuestionario Escolar</h3>
-                    <ul>
-                        <li>Matemáticas</li>
-                        <li>Español</li>
-                        <li>Ciencias</li>
-                        <li>Estudios Sociales</li>
-                        <li>Inglés</li>
-                    </ul>
-                </div>
-
-            </div>
-
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/Gama.png" alt="Tutoría Matemática">
-                    <h3>Tutoría Matemática para Bachiller</h3>
-
-                </div>
-
-            </div>
-
-
-
         </div>
+
+        <section id="servicios" class="services-section">
+            <h2>Servicios que te ofrezco</h2>
+            <div class="services">
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/office.jpeg" alt="Paquetes Office">
+                        <h3>Instalación de Office</h3>
+                        <ul>
+                            <li>Licencia Activada</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/images.jpeg" class="chapea" alt="Servicio de chapea">
+                        <h3>Chapea</h3>
+                        <ul>
+                            <li>San Pablo</li>
+                            <li>Carmona</li>
+                            <li>Pavones</li>
+                            <li>Santa Rita</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/impres.jpg" alt="Impresiones y copias">
+                        <h3>Impresiones y Copias</h3>
+                        <ul>
+                            <li>A color</li>
+                            <li>Blanco y negro</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/anny.jpg" alt="Ventas de pulseras y aretes">
+                        <h3>Ventas de Pulseras y Aretes</h3>
+                        <a href="pdf/Pulseras y Aretes.pdf" target="_blank" class="btn-pdf" rel="noopener noreferrer">
+                            <i class="fa-regular fa-file-pdf"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/descarga.png" alt="Cuestionario escolar">
+                        <h3>Cuestionario Escolar</h3>
+                        <ul>
+                            <li>Matemáticas</li>
+                            <li>Español</li>
+                            <li>Ciencias</li>
+                            <li>Estudios Sociales</li>
+                            <li>Inglés</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card fade-in">
+                    <div class="card-inner card-front">
+                        <img src="img/Gama.png" alt="Tutoría matemática">
+                        <h3>Tutoría Matemática para Bachiller</h3>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto" class="contact-section">
+            <h2>Formulario de contacto</h2>
+            <form class="contact-form" action="#" method="post">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" required>
+
+                <label for="telefono">Teléfono</label>
+                <input id="telefono" name="telefono" type="tel" required>
+
+                <label for="mensaje">Mensaje</label>
+                <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+
+                <button type="submit">Enviar mensaje</button>
+            </form>
+        </section>
+
         <footer class="footer">
             <div class="footer-container">
                 <p>&copy; 2025 Mis Servicios | Todos los derechos reservados</p>
 
-               <div id="redes" class="footer-links">
-  <a href="https://www.facebook.com/media/set?vanity=lyliam.paredesgonzales&set=a.2206443972756224" 
-     target="_blank">
-    <i class="fab fa-facebook fa-2x" style="color:#3b5998;"></i>
-  </a>
-  <a href="https://www.instagram.com/accerios_anny?igsh=MTFya3Z5ZDlqanZ5Ng==" 
-     target="_blank">
-    <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
-  </a>
-</div>
+                <div class="footer-links">
+                    <a href="https://www.facebook.com/media/set?vanity=lyliam.paredesgonzales&set=a.2206443972756224" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-facebook fa-2x" style="color:#3b5998;"></i>
+                    </a>
+                    <a href="https://www.instagram.com/accerios_anny?igsh=MTFya3Z5ZDlqanZ5Ng==" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-instagram fa-2x" style="color:#E1306C;"></i>
+                    </a>
+                </div>
 
-
-                <div id="contacto" class="footer-contact">
-                    <p>Contacto: <a href="">84750400/85548880</a></p>
+                <div class="footer-contact">
+                    <p>Contacto: <a href="tel:+50684750400">84750400 / 85548880</a></p>
                 </div>
             </div>
         </footer>
+
         <script src="js/scrip.js"></script>
+
         <!-- Botón flotante de WhatsApp -->
-        <a href="https://wa.me/50684750400" class="whatsapp-float" target="_blank">
+        <a href="https://wa.me/50684750400" class="whatsapp-float" target="_blank" rel="noopener noreferrer">
             <i class="fab fa-whatsapp"></i>
         </a>
-
+    </div>
 </body>
 
 </html>
