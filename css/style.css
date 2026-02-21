@@ -336,3 +336,12 @@ body {
   color: #ccc;
   font-size: 18px;
 }
+/* Estilo especial para el horario dentro de las cards */
+.card-inner li.horario {
+    background: #f59e0b;      /* amarillo/naranja */
+    color: #fff;
+    font-weight: bold;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-align: center;
+}
