@@ -32,6 +32,7 @@
 
 
         <div class="services">
+            
             <div class="card fade-in">
                 <div class="card-inner card-front">
                     <img src="img/office.jpeg" alt="Paquetes Office">
@@ -43,6 +44,7 @@
                 </div>
 
             </div>
+            
             <div class="card fade-in">
     <div class="card-inner card-front">
         <img src="img/images.jpeg" class="chapea" alt="Estamos para Servirte">
@@ -79,36 +81,36 @@
                 </div>
 
             </div>
-            <div class="card fade-in">
-                <div class="card-inner card-front">
-                    <img src="img/descarga.png" alt="Cuestionario Escolar">
-                    <h3>Cuestionario Escolar</h3>
-                    <ul>
-                        <li>Matemáticas</li>
-                        <li>Español</li>
-                        <li>Ciencias</li>
-                        <li>Estudios Sociales</li>
-                        <li>Inglés</li>
-                    </ul>
-                </div>
-
-            </div>
+            
 
             <div class="card fade-in">
                 <div class="card-inner card-front">
                     <img src="img/Gama.png" alt="Tutoría Matemática">
-                    <h3>Tutoría Matemática para Bachiller</h3>
+                    <h3>Tutoría Matemática </h3>
 
                 </div>
 
             </div>
 
+ <div class="card fade-in">
+    <div class="card-inner card-front">
 
+        <img src="img/paginaweb.png" alt="Sitios Web Profesionales">
+
+        <h3>Sitios Web Profesionales</h3>
+
+        <div class="tag">Diseño moderno y responsive</div>
+        <div class="tag">Páginas rápidas y seguras</div>
+        <div class="tag">Integración con formularios</div>
+        <div class="tag">Hosting + Dominio</div>
+
+    </div>
+</div>
 
         </div>
         <footer class="footer">
             <div class="footer-container">
-                <p>&copy; 2025 Mis Servicios | Todos los derechos reservados</p>
+                <p>&copy; <span id="current-year"></span> Mis Servicios | Todos los derechos reservados</p>
 
                <div class="footer-links">
   <a href="https://www.facebook.com/media/set?vanity=lyliam.paredesgonzales&set=a.2206443972756224" 
@@ -132,7 +134,9 @@
         <a href="https://wa.me/50684750400" class="whatsapp-float" target="_blank">
             <i class="fab fa-whatsapp"></i>
         </a>
-
+<script>
+  document.getElementById("current-year").textContent = new Date().getFullYear();
+</script>
 </body>
 
 </html>
